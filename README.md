@@ -14,3 +14,16 @@
 		<code>gulp</code>
 	</li>
 </ol>
+<br>
+<h3>Lista de paquetes usados</h3>
+<ul>
+	<li>gulp</li>
+	<li>gulp-pug</li>
+	<li>gulp-sass</li>
+	<li>gulp-imagemin</li>
+	<li>gulp-uglify</li>
+	<li>gulp-concat</li>
+	<li>browser-sync</li>
+</ul>
+<br>
+Agradecimientos a los creadores de todos los paquetes mencionados
