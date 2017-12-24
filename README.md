@@ -1,5 +1,5 @@
 # gulp-starterkit
-A quick starterkit for small websites
+<h3>A quick starterkit for small websites</h3>
 <ol>
 	<li><h3>Clonar el repositorio en tu carpeta de proyecto</h3><br>
 		<code>git clone https://github.com/EnzoDarling/gulp-starterkit.git</code>
@@ -13,3 +13,4 @@ A quick starterkit for small websites
 		<h3><h3>Ejecutar la tarea por defecto de gulp(se abrira la ventana del navegador con live reload)</h3></h3><br>
 		<code>gulp</code>
 	</li>
+</ol>
