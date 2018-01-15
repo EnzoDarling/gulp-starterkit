@@ -7,7 +7,7 @@
 	<li><h3>Ir al directorio del proyecto</h3>
 		<code>cd gulp-starterkit</code></li>
 	<li><h3>Instalar todas las dependencias(comprobar si nodejs y npm estan instalados)</h3>
-		<code>npm install</code>
+		<code>npm install --save-dev gulp, gulp-sass, gulp-imagemin, gulp-pug, gulp-minify, gulp-concat</code>		
 	</li>
 	<li>
 		<h3><h3>Ejecutar la tarea por defecto de gulp(se abrira la ventana del navegador con live reload)</h3></h3>
