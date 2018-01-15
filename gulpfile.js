@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const browser = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const pug = require	('gulp-pug');
 const sass = require('gulp-sass');
@@ -18,6 +19,15 @@ gulp.task('message', () => {
 	return console.log('Gulp is running...');
 });
 
+//Server Estatico
+gulp.task('browserSync', () =>{
+	browser.init({
+		server:{
+			baseDir: "./dist"
+		}
+	});
+});
+
 //Pug
 gulp.task('views', () => {
 	gulp.src('src/*.pug')
@@ -25,6 +35,7 @@ gulp.task('views', () => {
 			pretty: false
 		}))
 		.pipe(gulp.dest('dist/'))
+		.pipe(browser.reload({stream: true}));
 });
 //Minify Js
 /*
@@ -55,6 +66,7 @@ gulp.task('sass', ()=>{
 	gulp.src('src/sass/*')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('dist/css'))
+		.pipe(browser.reload({stream: true}));
 });
 gulp.task('watch', ()=> {
 	/*gulp.watch('src/js/*.js', ['scripts']);*/
@@ -62,4 +74,4 @@ gulp.task('watch', ()=> {
 	gulp.watch('src/sass/*.sass', ['sass']);
 	gulp.watch('src/*.pug', ['views']);
 });
-gulp.task('default', ['message', 'views', 'sass', 'imageMin', 'watch']);
+gulp.task('default', ['message', 'views', 'sass', 'imageMin', 'watch', 'browserSync']);
